@@ -6,11 +6,15 @@ author: einari
 ---
 # Commands
 
-A command is the concept representing the users intent. It is the thing the system
-will have authorization around, input validation and business rules.
+A command is the concept representing the users intent, it expresses in a direct way what the user wishes to achieve. 
+It is expressed in the language of the Domain and, as such, should be immediately understandable by users of the system.
+A command is always named in the imperative form.  That is, is it an instruction to do something.
+
 Its technical representation can be in the form of a method in the system with its
-parameters being the attributes of the command. But it could also be modelled as an
-object with a name and its attributes.
+parameters being the attributes of the command. But it could also be modelled as a
+type with a name and its attributes where the type is effectively a serialized method call.
+
+A command in the system will have corresponding authorization, validation and business rules.
 
 ## Actors
 
@@ -19,8 +23,8 @@ Read more about the actors defined in this system [here](../Projects/actors.md).
 
 ## Transactions
 
-A command is also the domain specific transactional boundary. The things one need to
-commit together should be on the command, or the parameters of the method.
+A command is also a domain specific transactional boundary.  A command and a transaction are one in the same.
+Everything that needs to be commited together should be on the command or the parameters of the method.
 
 ## Examples
 
@@ -51,7 +55,7 @@ This would require you to secure the object and validate the properties on the o
 which would cause you to have to implement infrastructure to deal with this.
 
 ```csharp
-public class AddItemToCart
+public class AddProductToCart
 {
     public Guid Product { get; set; }
     public int Quantity { get; set; }
