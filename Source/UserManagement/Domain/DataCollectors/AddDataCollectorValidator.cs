@@ -20,6 +20,10 @@ namespace Domain
                 .NotEmpty()
                 .WithMessage("Display name is not correct - Has to be defined");
 
+
+            RuleFor(_ => _.Email)
+                .NotEmpty().WithMessage("Email is required.")
+                .EmailAddress().WithMessage("Must provide a valid email address");
             //TODO: rest of the rules
         }
     }
