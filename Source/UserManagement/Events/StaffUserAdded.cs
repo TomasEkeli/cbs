@@ -9,7 +9,7 @@ namespace Events
         public Guid Id { get; set; }
         public string FullName { get; set; }
         public string DisplayName { get; set; }
-        public int Age { get; set; } //Question from Bjørn: Is date or year of birth better?
+        public int YearOfBirth { get; set; } //Question from Bjørn: Is date or year of birth better?
         public Sex Sex { get; set; } //TODO: Should not use enum in events. Only primitive types
         public Guid NationalSociety { get; set; }
         public Language PreferredLanguage { get; set; } //TODO: Should not use enum in events. Only primitive types

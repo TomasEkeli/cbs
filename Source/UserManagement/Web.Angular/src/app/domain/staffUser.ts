@@ -1,7 +1,7 @@
 export class StaffUser {
     fullName: string;
     displayName: string;
-    age: number;
+    yearOfBirth: number;
     sex: string;
     nationalSociety: string;
     preferredLanguage: string;
@@ -11,7 +11,7 @@ export class StaffUser {
     constructor(o: any) {
         this.fullName = o.fullName;
         this.displayName = o.displayName;
-        this.age = o.age;
+        this.yearOfBirth = o.yearOfBirth;
         this.sex = o.sex;
         this.nationalSociety = o.nationalSociety;
         this.preferredLanguage = o.preferredLanguage;

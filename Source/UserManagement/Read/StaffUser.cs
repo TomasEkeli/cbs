@@ -27,7 +27,7 @@ namespace Read
             Id = @event.Id;
             FullName = @event.FullName;
             DisplayName = @event.DisplayName;
-            Age = @event.Age;
+            Age = @event.YearOfBirth;
             Sex = @event.Sex;
             NationalSociety = @event.NationalSociety;
             PreferredLanguage = @event.PreferredLanguage;

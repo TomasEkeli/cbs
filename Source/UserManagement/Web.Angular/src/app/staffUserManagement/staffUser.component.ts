@@ -71,7 +71,7 @@ export class StaffUserComponent implements OnInit {
         fullName: staffUser.fullName,
         displayName: staffUser.displayName,
         sex: staffUser.sex,
-        age: staffUser.age,
+        yearOfBirth: staffUser.yearOfBirth,
         nationalSociety: staffUser.nationalSociety,
         preferredLanguage: staffUser.preferredLanguage,
         mobilePhoneNumber: staffUser.mobilePhoneNumber,
