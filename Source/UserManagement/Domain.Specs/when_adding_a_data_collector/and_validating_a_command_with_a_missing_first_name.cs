@@ -27,9 +27,9 @@ namespace Domain.Specs.when_adding_a_data_collector
             cmd = new AddDataCollector
             {
                 Id = Guid.NewGuid(),
-                FirstName = null,
-                LastName = "Collector",
-                Age = 25,
+                FullName = null,
+                DisplayName = "Collector",
+                YearOfBirth = 1997,
                 Sex = Sex.Male,
                 NationalSociety = Guid.NewGuid(),
                 PreferredLanguage = Language.English,
@@ -43,6 +43,6 @@ namespace Domain.Specs.when_adding_a_data_collector
 
         It should_be_invalid = () => validation_results.ShouldBeInvalid();
         It should_have_a_single_validation_error = () => validation_results.ShouldHaveInvalidCountOf(1);
-        It should_identify_the_first_name_as_the_problem = () => validation_results.ShouldHaveInvalidProperty(nameof(cmd.FirstName));
+        It should_identify_the_full_name_as_the_problem = () => validation_results.ShouldHaveInvalidProperty(nameof(cmd.FullName));
     }
 }

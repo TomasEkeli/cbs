@@ -27,9 +27,9 @@ namespace Domain.Specs.when_adding_a_data_collector
             cmd = new AddDataCollector
             {
                 Id = Guid.NewGuid(),
-                FirstName = "Data",
-                LastName = "Collector",
-                Age = 25,
+                FullName = "Data",
+                DisplayName = "Collector",
+                YearOfBirth = 1990,
                 Sex = Sex.Male,
                 NationalSociety = Guid.NewGuid(),
                 PreferredLanguage = Language.English,
